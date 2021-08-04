@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/><meta property="og:type" content="website"/><meta property="twitter:card" content="summary_large_image"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta property="og:site_name" content="MetaMaker "/><meta property="og:title" content="MetaMaker - The fastest way to make meta tags"/><meta name="title" content="MetaMaker - The fastest way to make meta tags"/><meta property="twitter:title" content="MetaMaker - The fastest way to make meta tags"><meta property="og:description" content="The fastest way to make meta tags and show off your website to the world."/><meta property="twitter:description" content="The fastest way to make meta tags and show off your website to the world."><meta name="description" content="The fastest way to make meta tags and show off your website to the world."><meta name="language" content="en"/><meta name="twitter:site" content="@arcodez"/><meta property="og:url" content="https://meta.ar-dev.cf"/><meta property="twitter:url" content="https://meta.ar-dev.cf"/><meta property="language" content="EN"/><meta name="theme-color" content="#121212"/>
+    <title>MetaMaker</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <script src="script.min.js"></script>
+		<h1>The <span class="detailed">~fastest~</span> way to make meta tags</h1>
+		<p>With MetaMaker, you will never have to worry about metatags again. Wanna set your site's description on Google or make a Discord embed for your site? This website allows you to do just that, the easy way. Generates normal metatags (used by Google, and more), OpenGraph metatags (used by Facebook, Discord, and more), and Twitter metatags. Fields marked with * are extremely recommended for basic function. Generator made by AR (github AR-Student824). <strike>I'm Canadian and I call it "color", what is wrong with me?</strike></p>
+		<button id="copy" onclick="copy()">Copy</button>
+		| After copying, put this code in your head tag.
+		<br /><br />
+		<h3>Webpage name*</h3>
+		<p>The name of your website.</p>
+		<textarea id="website" placeholder="MetaMaker" oninput="makeMetaTags()"></textarea>
+		<br /><br />
+		<h3>Title*</h3>
+		<p>The name of your website, and some short text that describes your website is recommended.</p>
+		<textarea id="title" placeholder="MetaMaker - The fastest way to make meta tags" oninput="makeMetaTags()"></textarea>
+		<br /><br />
+		<h3>Description*</h3>
+		<p>A concise description of your site. Don't put too much here, put that on your website.</p> 
+		<textarea id="description" placeholder="The fastest way to make meta tags, and show off your website to the world." oninput="makeMetaTags()"></textarea>
+		<br /><br />
+		<h3>URL*</h3>
+		<p>A direct URL that leads to the webpage these meta tags are going to go on.</p> 
+		<textarea id="url" placeholder="https://meta.ar-dev.cf" oninput="makeMetaTags()"></textarea>
+		<br /><br />
+		<h3>Twitter username</h3>
+		<p>Your Twitter username <b>without the @</b>.</p>
+		<textarea id="twitter" placeholder="arcodez" oninput="makeMetaTags()"></textarea>
+		<br /><br />
+		<h3>Image</h3>
+		<p>A URL with an image that represents your website. This can be your site's icon or some other image. PNG or JP(E)G recommended, but should work on all image files.</p>
+		<textarea type="url" id="image" placeholder="https://mycoolwebsite.com/images/mycoolimage.png" oninput="makeMetaTags()"></textarea>
+		<br /><br />
+		<h3>Primary language</h3>
+		<p>Put the 2 digit language code of your website's primary used language. For example en for English, or fr for French.</p>
+		<textarea id="lang" placeholder="en" oninput="makeMetaTags()"></textarea>
+		<br /><br />
+		<h3></h3>
+		<h3>Theme color</h3>
+		<p>This color is the color of the search bar on Chrome Mobile, and shows on Discord when your link is sent in chat. Supports a <a href="https://www.google.com/search?q=color+picker">hex color value</a>.</p>
+		<textarea id="color" placeholder="#121212" oninput="makeMetaTags()"></textarea>
+		<br /><br />
+		<input id="input" style="display:none;" />
+  </body>
+</html>
