@@ -57,7 +57,7 @@ function copy() {
 	setTimeout(() => { document.getElementById('copy').innerHTML = 'Copy' }, 750)
 }
 
-function copyreactsafe() {
+function copyr() {
 	const code = document.getElementById('input')
 	if (!code.value) {
 		document.getElementById('copyreactsafe').innerHTML = 'There\'s nothing to copy!'
