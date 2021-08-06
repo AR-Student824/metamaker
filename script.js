@@ -17,12 +17,12 @@ function makeMetaTags() {
 	if (title.value) {
 		input.value = input.value + `<meta property="og:title" content="${title.value}"/>`
 		input.value = input.value + `<meta name="title" content="${title.value}"/>`
-		input.value = input.value + `<meta property="twitter:title" content="${title.value}">`
+		input.value = input.value + `<meta property="twitter:title" content="${title.value}"/>`
 	}
 	if (description.value) {
 		input.value = input.value + `<meta property="og:description" content="${description.value}"/>`
-		input.value = input.value + `<meta property="twitter:description" content="${description.value}">`
-		input.value = input.value + `<meta name="description" content="${description.value}">`
+		input.value = input.value + `<meta property="twitter:description" content="${description.value}"/>`
+		input.value = input.value + `<meta name="description" content="${description.value}"/>`
 	}
 	if (language.value) {
 		input.value = input.value + `<meta name="language" content="${language.value}"/>`
@@ -55,4 +55,16 @@ function copy() {
 		code.setAttribute("style", "display: initial;"); code.select(); document.execCommand("copy"); code.setAttribute("style", "display: none;"); document.getElementById('copy').innerHTML = 'Copied!';
 	}
 	setTimeout(() => { document.getElementById('copy').innerHTML = 'Copy' }, 750)
+}
+
+function copyreactsafe() {
+	const code = document.getElementById('input')
+	if (!code.value) {
+		document.getElementById('copyreactsafe').innerHTML = 'There\'s nothing to copy!'
+	} else {
+		code.value = code.value.replace('<meta charset="UTF-8"/>', '<meta charSet="UTF-8"/>')
+		code.setAttribute("style", "display: initial;"); code.select(); document.execCommand("copy"); code.setAttribute("style", "display: none;"); document.getElementById('copy').innerHTML = 'Copied!';
+		code.value = code.value.replace('<meta charSet="UTF-8"/>', '<meta charset="UTF-8"/>')
+	}
+	setTimeout(() => { document.getElementById('copyreactsafe').innerHTML = 'Copy' }, 750)
 }
