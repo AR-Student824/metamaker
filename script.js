@@ -56,15 +56,3 @@ function copy() {
 	}
 	setTimeout(() => { document.getElementById('copy').innerHTML = 'Copy' }, 750)
 }
-
-function copyr() {
-	const code = document.getElementById('input')
-	if (!code.value) {
-		document.getElementById('copyreactsafe').innerHTML = 'There\'s nothing to copy!'
-	} else {
-		code.value = code.value.replace('<meta charset="UTF-8"/>', '<meta charSet="UTF-8"/>')
-		code.setAttribute("style", "display: initial;"); code.select(); document.execCommand("copy"); code.setAttribute("style", "display: none;"); document.getElementById('copy').innerHTML = 'Copied!';
-		code.value = code.value.replace('<meta charSet="UTF-8"/>', '<meta charset="UTF-8"/>')
-	}
-	setTimeout(() => { document.getElementById('copyreactsafe').innerHTML = 'Copy' }, 750)
-}
